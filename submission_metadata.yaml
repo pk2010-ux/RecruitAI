@@ -1,0 +1,73 @@
+# Redrob Hackathon — Submission Metadata
+# ============================================================================
+team_name: "The Glitch Vibes"
+
+primary_contact:
+  name: "Priyajit"
+  email: "priyajit.k2010@gmail.com"
+  phone: "+91-7896003129"
+
+team_members:
+  - name: "Shashank Kalita"
+    email: "vmx2209@gmail.com"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/YOUR_USERNAME/RecruitAI"
+
+sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/recruitai-ranker"
+
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./output/submission.csv"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Windows PC with RTX 4050"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.12"
+  os: "Windows"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Claude"
+
+ai_usage_summary: |
+  Used Claude for code development assistance — architecture design,
+  code improvement, and debugging. All candidate data processing
+  is done locally. No candidate data was fed to any LLM.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  Four-stage hybrid ranking pipeline. Stage 1: Hard filters eliminate
+  non-tech candidates and ~80 honeypots using timeline/skill impossibility
+  checks. Stage 2: Rule-based multi-dimensional scoring on 7 axes
+  (title fit, skills match, career quality, experience band, education,
+  location, behavioral signals) with weights derived from JD analysis.
+  Stage 3: Sentence-transformer (MiniLM-L6-v2) semantic similarity on
+  top 2000 candidates to catch keyword-absent but contextually fitting
+  profiles. Stage 4: Weighted blend of rule + semantic scores with
+  behavioral multiplier (activity, responsiveness, availability).
+  Anti-keyword-stuffing: skills weighted by proficiency × duration ×
+  endorsements. Consulting-only penalty per JD guidance. Runtime ~3
+  minutes on CPU for 100K candidates.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
