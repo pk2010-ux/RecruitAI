@@ -65,7 +65,7 @@ RecruitAI uses a **4-stage hybrid ranking pipeline**:
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/RecruitAI.git
+git clone https://github.com/pk2010-ux/RecruitAI.git
 cd RecruitAI
 
 # Install dependencies
