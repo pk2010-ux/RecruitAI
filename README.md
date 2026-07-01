@@ -55,6 +55,9 @@ RecruitAI uses a **4-stage hybrid ranking pipeline**:
 
 ## Quick Start
 
+### Demo URL
+Before building from source, you can try the Project [here](https://huggingface.co/spaces/Priyajit0202/RecruitAI)
+
 ### Prerequisites
 
 - Python 3.10+
