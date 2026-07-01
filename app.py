@@ -17,8 +17,10 @@ import time
 import sys
 import os
 
-# Ensure project root is on path
-sys.path.insert(0, os.path.dirname(__file__))
+# Ensure project root is on path (needed for HuggingFace Spaces)
+_APP_DIR = os.path.dirname(os.path.abspath(__file__))
+if _APP_DIR not in sys.path:
+    sys.path.insert(0, _APP_DIR)
 
 from pipeline.hard_filter import apply_hard_filters
 from pipeline.feature_scorer import compute_feature_score
