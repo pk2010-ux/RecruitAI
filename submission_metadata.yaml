@@ -14,9 +14,9 @@ team_members:
 # ============================================================================
 # Code and reproducibility
 # ============================================================================
-github_repo: "https://github.com/YOUR_USERNAME/RecruitAI"
+github_repo: "https://github.com/pk2010-ux/RecruitAI"
 
-sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/recruitai-ranker"
+sandbox_link: "https://huggingface.co/spaces/Priyajit0202/RecruitAI"
 
 reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./output/submission.csv"
 
